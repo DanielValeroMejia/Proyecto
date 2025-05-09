@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AppProvider } from './Contexto/Contexto';
 
 
 
@@ -17,6 +18,7 @@ function App() {
 
   return (
 
+    <AppProvider>
     <Router>
       <Menu />
       <Routes>
@@ -28,7 +30,7 @@ function App() {
       <Route path="/Usuarios" element={<Usuarios />} />
       </Routes>
     </Router>
-
+</AppProvider>
     
   )
 }
